@@ -21,7 +21,7 @@ as Open Source as well.
 ## Features
 
 * Compatible with Arduino bootloaders
-* Plug-and-play integration with FTDI USB-to-serial, SPI and IIC OLEDs
+* Plug-and-play integration with FTDI USB-to-serial, AVRKit pins and IIC OLEDs
 * SCL and SDA has stronger pull-ups
 * Powered by USB (5V)
 * Works at 3.3V (to avoid burning some OLEDs and FPGAs :)
@@ -29,7 +29,6 @@ as Open Source as well.
 ## Limitations
 
 * GPIOs are not exposed (except the ones for serial, SPI and IIC)
-* The AVRKit headers are not AVRKit-compatible
 * Current version is THT, so the board is huge
 
 ## Things that may be added
@@ -46,6 +45,7 @@ as Open Source as well.
   * 8MHz crystal
   * LM3940 3.3V regulator
   * Inline pins for FTDI USB-to-Serial
-  * Inline pins for SPI and IIC OLEDs
+  * Inline pins for IIC OLEDs
+  * AVR-compatible SPI header
   * And the classic GPIO-13 LED
 
