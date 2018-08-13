@@ -1,37 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:duduino
-LIBS:switches
+EESchema Schematic File Version 4
 LIBS:duduino-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -46,18 +15,18 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LM3940_TO220 U1
+L duduino:LM3940_TO220 U1
 U 1 1 5B48CE15
 P 2900 1300
 F 0 "U1" H 2900 1450 50  0000 C CNN
 F 1 "LM3940_TO220" H 2650 1550 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220-3_Horizontal" H 2900 1525 50  0001 C CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 2900 1525 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/lm3940.pdf" H 2900 900 50  0001 C BNN
 	1    2900 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5B48CE76
 P 2900 1850
 F 0 "#PWR01" H 2900 1600 50  0001 C CNN
@@ -68,7 +37,7 @@ F 3 "" H 2900 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR02
+L power:+5V #PWR02
 U 1 1 5B48CE8D
 P 2450 1150
 F 0 "#PWR02" H 2450 1000 50  0001 C CNN
@@ -79,7 +48,7 @@ F 3 "" H 2450 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR03
+L power:+3.3V #PWR03
 U 1 1 5B48CEA5
 P 3350 1150
 F 0 "#PWR03" H 3350 1000 50  0001 C CNN
@@ -92,20 +61,20 @@ $EndComp
 Wire Wire Line
 	2600 1300 2450 1300
 Wire Wire Line
-	2450 1150 2450 1400
+	2450 1150 2450 1300
 Wire Wire Line
 	3200 1300 3350 1300
 Wire Wire Line
-	3350 1150 3350 1400
+	3350 1150 3350 1300
 Wire Wire Line
-	2900 1600 2900 1850
+	2900 1600 2900 1750
 $Comp
-L USB_B J1
+L Connector:USB_B J1
 U 1 1 5B48D98A
 P 1100 1450
 F 0 "J1" H 900 1900 50  0000 L CNN
 F 1 "USB_B" H 900 1800 50  0000 L CNN
-F 2 "Connectors:USB_B" H 1250 1400 50  0001 C CNN
+F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 1250 1400 50  0001 C CNN
 F 3 "" H 1250 1400 50  0001 C CNN
 	1    1100 1450
 	1    0    0    -1  
@@ -113,7 +82,7 @@ $EndComp
 NoConn ~ 1400 1450
 NoConn ~ 1400 1550
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5B48DA17
 P 1100 2050
 F 0 "#PWR04" H 1100 1800 50  0001 C CNN
@@ -124,7 +93,7 @@ F 3 "" H 1100 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR05
+L power:+5V #PWR05
 U 1 1 5B48DA2A
 P 1500 1150
 F 0 "#PWR05" H 1500 1000 50  0001 C CNN
@@ -139,14 +108,14 @@ Wire Wire Line
 Wire Wire Line
 	1500 1250 1500 1150
 Wire Wire Line
-	1100 1850 1100 2050
+	1100 1850 1100 1950
 Wire Wire Line
 	1000 1850 1000 1950
 Wire Wire Line
 	1000 1950 1100 1950
 Connection ~ 1100 1950
 $Comp
-L +3.3V #PWR06
+L power:+3.3V #PWR06
 U 1 1 5B48E4C0
 P 4000 1150
 F 0 "#PWR06" H 4000 1000 50  0001 C CNN
@@ -157,7 +126,7 @@ F 3 "" H 4000 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 5B48E4D3
 P 4300 1300
 F 0 "R1" V 4380 1300 50  0000 C CNN
@@ -168,7 +137,7 @@ F 3 "" H 4300 1300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D1
+L Device:LED D1
 U 1 1 5B48E514
 P 4800 1300
 F 0 "D1" H 4800 1400 50  0000 C CNN
@@ -179,7 +148,7 @@ F 3 "" H 4800 1300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 5B48E55B
 P 5100 1450
 F 0 "#PWR07" H 5100 1200 50  0001 C CNN
@@ -200,7 +169,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 1300 5100 1450
 $Comp
-L R R2
+L Device:R R2
 U 1 1 5B48E5FD
 P 4300 1850
 F 0 "R2" V 4380 1850 50  0000 C CNN
@@ -211,7 +180,7 @@ F 3 "" H 4300 1850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D2
+L Device:LED D2
 U 1 1 5B48E624
 P 4800 1850
 F 0 "D2" H 4800 1950 50  0000 C CNN
@@ -222,7 +191,7 @@ F 3 "" H 4800 1850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 5B48E66B
 P 5100 2000
 F 0 "#PWR08" H 5100 1750 50  0001 C CNN
@@ -243,7 +212,7 @@ Wire Wire Line
 Text Label 4000 1850 2    60   ~ 0
 SCK
 $Comp
-L Crystal Y1
+L Device:Crystal Y1
 U 1 1 5B48E814
 P 6350 1300
 F 0 "Y1" H 6350 1450 50  0000 C CNN
@@ -254,11 +223,11 @@ F 3 "" H 6350 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5850 1300 6200 1300
+	5850 1300 6000 1300
 Wire Wire Line
-	6500 1300 6800 1300
+	6500 1300 6650 1300
 $Comp
-L C C3
+L Device:C C3
 U 1 1 5B48E8A8
 P 6000 1650
 F 0 "C3" H 6025 1750 50  0000 L CNN
@@ -269,7 +238,7 @@ F 3 "" H 6000 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L Device:C C4
 U 1 1 5B48E915
 P 6650 1650
 F 0 "C4" H 6675 1750 50  0000 L CNN
@@ -286,7 +255,7 @@ Wire Wire Line
 	6650 1500 6650 1300
 Connection ~ 6650 1300
 $Comp
-L GND #PWR09
+L power:GND #PWR09
 U 1 1 5B48E9B6
 P 6000 2000
 F 0 "#PWR09" H 6000 1750 50  0001 C CNN
@@ -297,7 +266,7 @@ F 3 "" H 6000 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 5B48E9DC
 P 6650 2000
 F 0 "#PWR010" H 6650 1750 50  0001 C CNN
@@ -316,7 +285,7 @@ XTAL1
 Text Label 6800 1300 0    60   ~ 0
 XTAL2
 $Comp
-L +3.3V #PWR011
+L power:+3.3V #PWR011
 U 1 1 5B48EC21
 P 7600 1150
 F 0 "#PWR011" H 7600 1000 50  0001 C CNN
@@ -327,7 +296,7 @@ F 3 "" H 7600 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L Device:R R3
 U 1 1 5B48EC6B
 P 7900 1300
 F 0 "R3" V 7980 1300 50  0000 C CNN
@@ -340,9 +309,9 @@ $EndComp
 Wire Wire Line
 	7750 1300 7600 1300
 Wire Wire Line
-	7600 1150 7600 1600
+	7600 1150 7600 1300
 $Comp
-L R R4
+L Device:R R4
 U 1 1 5B48ED13
 P 7900 1600
 F 0 "R4" V 7980 1600 50  0000 C CNN
@@ -364,18 +333,18 @@ I2C_SCL
 Text Label 8300 1600 0    60   ~ 0
 I2C_SDA
 $Comp
-L ATMEGA168-20PU U2
+L duduino:ATMEGA168-20PU U2
 U 1 1 5B48F0A5
 P 3600 4150
-F 0 "U2" H 2750 5450 50  0000 L BNN
-F 1 "ATMEGA168-20PU" H 3950 2800 50  0000 L BNN
+F 0 "U2" H 2750 2800 50  0000 L BNN
+F 1 "ATMEGA168-20PU" H 3650 2800 50  0000 L BNN
 F 2 "Housings_DIP:DIP-28_W7.62mm" H 3600 4150 50  0001 C CIN
 F 3 "" H 3600 4150 50  0001 C CNN
 	1    3600 4150
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR012
+L power:+3.3V #PWR012
 U 1 1 5B48F179
 P 2450 2850
 F 0 "#PWR012" H 2450 2700 50  0001 C CNN
@@ -388,7 +357,7 @@ $EndComp
 Wire Wire Line
 	2600 3000 2450 3000
 Wire Wire Line
-	2450 2850 2450 3600
+	2450 2850 2450 3000
 Wire Wire Line
 	2450 3300 2600 3300
 Connection ~ 2450 3000
@@ -396,7 +365,7 @@ Wire Wire Line
 	2450 3600 2600 3600
 Connection ~ 2450 3300
 $Comp
-L GND #PWR013
+L power:GND #PWR013
 U 1 1 5B48F53F
 P 2450 5450
 F 0 "#PWR013" H 2450 5200 50  0001 C CNN
@@ -409,7 +378,7 @@ $EndComp
 Wire Wire Line
 	2600 5300 2450 5300
 Wire Wire Line
-	2450 5200 2450 5450
+	2450 5200 2450 5300
 Wire Wire Line
 	2600 5200 2450 5200
 Connection ~ 2450 5300
@@ -462,20 +431,18 @@ MOSI
 Text Label 4700 3200 0    60   ~ 0
 ~SS
 $Comp
-L Conn_01x06 J2
+L Connector_Generic:Conn_01x06 J2
 U 1 1 5B49098D
 P 7950 3450
 F 0 "J2" H 7950 3750 50  0000 C CNN
 F 1 "FTDI" H 7950 3050 50  0000 C CNN
-F 2 "Connectors_Samtec:SL-106-X-XX_1x06" H 7950 3450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7950 3450 50  0001 C CNN
 F 3 "" H 7950 3450 50  0001 C CNN
 	1    7950 3450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7200 3250 7750 3250
-Wire Wire Line
-	7200 3350 7750 3350
 Wire Wire Line
 	7100 3450 7750 3450
 Wire Wire Line
@@ -484,19 +451,16 @@ Wire Wire Line
 	7750 3650 7500 3650
 Wire Wire Line
 	7750 3750 7500 3750
-Text Label 7500 3550 2    60   ~ 0
-TXD
 Text Label 7500 3650 2    60   ~ 0
+TXD
+Text Label 7500 3550 2    60   ~ 0
 RXD
 Text Label 7500 3750 2    60   ~ 0
 DTR
 Wire Wire Line
 	7100 3450 7100 3100
-Wire Wire Line
-	7200 3250 7200 3900
-Connection ~ 7200 3350
 $Comp
-L GND #PWR014
+L power:GND #PWR014
 U 1 1 5B49106A
 P 7200 3900
 F 0 "#PWR014" H 7200 3650 50  0001 C CNN
@@ -507,7 +471,7 @@ F 3 "" H 7200 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR015
+L power:+3.3V #PWR015
 U 1 1 5B491179
 P 7100 3100
 F 0 "#PWR015" H 7100 2950 50  0001 C CNN
@@ -526,18 +490,18 @@ RXD
 Text Label 4700 4700 0    60   ~ 0
 TXD
 $Comp
-L Conn_01x04 J3
+L Connector_Generic:Conn_01x04 J3
 U 1 1 5B49184C
 P 7950 4850
 F 0 "J3" H 7950 5050 50  0000 C CNN
 F 1 "IIC" H 7950 4550 50  0000 C CNN
-F 2 "Connectors_Samtec:SL-104-X-XX_1x04" H 7950 4850 50  0001 C CNN
+F 2 "duduino:SPI-OLED" H 7950 4850 50  0001 C CNN
 F 3 "" H 7950 4850 50  0001 C CNN
 	1    7950 4850
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR016
+L power:+3.3V #PWR016
 U 1 1 5B491A96
 P 9500 3300
 F 0 "#PWR016" H 9500 3150 50  0001 C CNN
@@ -548,7 +512,7 @@ F 3 "" H 9500 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR017
+L power:GND #PWR017
 U 1 1 5B491ACE
 P 9500 3700
 F 0 "#PWR017" H 9500 3450 50  0001 C CNN
@@ -559,18 +523,18 @@ F 3 "" H 9500 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR018
+L power:+3.3V #PWR018
 U 1 1 5B491B3D
-P 7200 4500
-F 0 "#PWR018" H 7200 4350 50  0001 C CNN
-F 1 "+3.3V" H 7200 4640 50  0000 C CNN
-F 2 "" H 7200 4500 50  0001 C CNN
-F 3 "" H 7200 4500 50  0001 C CNN
-	1    7200 4500
+P 7100 4500
+F 0 "#PWR018" H 7100 4350 50  0001 C CNN
+F 1 "+3.3V" H 7100 4640 50  0000 C CNN
+F 2 "" H 7100 4500 50  0001 C CNN
+F 3 "" H 7100 4500 50  0001 C CNN
+	1    7100 4500
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR019
+L power:GND #PWR019
 U 1 1 5B491B75
 P 7200 5200
 F 0 "#PWR019" H 7200 4950 50  0001 C CNN
@@ -581,11 +545,11 @@ F 3 "" H 7200 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9250 1450 9650 1450
+	9250 1450 9450 1450
 Text Label 9250 1450 2    60   ~ 0
 RST
 $Comp
-L R R5
+L Device:R R5
 U 1 1 5B492145
 P 9800 1450
 F 0 "R5" V 9880 1450 50  0000 C CNN
@@ -596,7 +560,7 @@ F 3 "" H 9800 1450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR020
+L power:+3.3V #PWR020
 U 1 1 5B4921AE
 P 10150 1000
 F 0 "#PWR020" H 10150 850 50  0001 C CNN
@@ -609,30 +573,30 @@ $EndComp
 Wire Wire Line
 	10150 1450 9950 1450
 Wire Wire Line
-	10150 1000 10150 1450
+	10150 1000 10150 1150
 $Comp
-L C C5
+L Device:C C5
 U 1 1 5B49223C
 P 9800 1800
 F 0 "C5" V 9850 1850 50  0000 L CNN
 F 1 "100n" V 9850 1550 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 9838 1650 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 9838 1650 50  0001 C CNN
 F 3 "" H 9800 1800 50  0001 C CNN
 	1    9800 1800
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	9450 1150 9450 1800
+	9450 1150 9450 1450
 Connection ~ 9450 1450
 Text Label 10150 1800 0    60   ~ 0
 DTR
 $Comp
-L SW_Push SW1
+L duduino:SW_Push SW1
 U 1 1 5B492939
 P 9800 1150
 F 0 "SW1" H 9850 1250 50  0000 L CNN
 F 1 "RESET" H 9800 1090 50  0000 C CNN
-F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h5mm" H 9800 1350 50  0001 C CNN
+F 2 "duduino:SW_PUSH_6mm" H 9800 1350 50  0001 C CNN
 F 3 "" H 9800 1350 50  0001 C CNN
 	1    9800 1150
 	1    0    0    -1  
@@ -647,14 +611,6 @@ Wire Wire Line
 Wire Wire Line
 	9950 1800 10150 1800
 Wire Wire Line
-	7750 4750 7200 4750
-Wire Wire Line
-	7200 4750 7200 4500
-Wire Wire Line
-	7750 4850 7200 4850
-Wire Wire Line
-	7200 4850 7200 5200
-Wire Wire Line
 	7750 4950 7600 4950
 Wire Wire Line
 	7750 5050 7600 5050
@@ -663,12 +619,12 @@ I2C_SCL
 Text Label 7600 5050 2    60   ~ 0
 I2C_SDA
 $Comp
-L Conn_02x03_Top_Bottom J4
+L Connector_Generic:Conn_02x03_Odd_Even J4
 U 1 1 5B4943CE
 P 9100 3500
 F 0 "J4" H 9150 3700 50  0000 C CNN
 F 1 "AVRKit" H 9150 3300 50  0000 C CNN
-F 2 "Connectors_Samtec:SDL-106-X-XX_2x03" H 9100 3500 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9100 3500 50  0001 C CNN
 F 3 "" H 9100 3500 50  0001 C CNN
 	1    9100 3500
 	1    0    0    -1  
@@ -698,23 +654,23 @@ SCK
 Text Label 8750 3600 2    60   ~ 0
 RST
 $Comp
-L C C1
+L Device:C C1
 U 1 1 5B495600
 P 2450 1550
 F 0 "C1" H 2475 1650 50  0000 L CNN
 F 1 "0.47u" H 2475 1450 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 2488 1400 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2488 1400 50  0001 C CNN
 F 3 "" H 2450 1550 50  0001 C CNN
 	1    2450 1550
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L Device:C C2
 U 1 1 5B49565C
 P 3350 1550
 F 0 "C2" H 3375 1650 50  0000 L CNN
 F 1 "33u" H 3375 1450 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 3388 1400 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 3388 1400 50  0001 C CNN
 F 3 "" H 3350 1550 50  0001 C CNN
 	1    3350 1550
 	1    0    0    -1  
@@ -722,7 +678,7 @@ $EndComp
 Wire Wire Line
 	2450 1700 2450 1750
 Wire Wire Line
-	2450 1750 3350 1750
+	2450 1750 2900 1750
 Connection ~ 2900 1750
 Wire Wire Line
 	3350 1750 3350 1700
@@ -730,4 +686,43 @@ Connection ~ 3350 1300
 Connection ~ 2450 1300
 Text Notes 3700 2000 0    60   ~ 0
 (GPIO13)
+Wire Wire Line
+	1100 1950 1100 2050
+Wire Wire Line
+	6000 1300 6200 1300
+Wire Wire Line
+	6650 1300 6800 1300
+Wire Wire Line
+	7600 1300 7600 1600
+Wire Wire Line
+	2450 3000 2450 3300
+Wire Wire Line
+	2450 3300 2450 3600
+Wire Wire Line
+	2450 5300 2450 5450
+Wire Wire Line
+	9450 1450 9650 1450
+Wire Wire Line
+	9450 1450 9450 1800
+Wire Wire Line
+	10150 1150 10150 1450
+Wire Wire Line
+	2900 1750 2900 1850
+Wire Wire Line
+	2900 1750 3350 1750
+Wire Wire Line
+	3350 1300 3350 1400
+Wire Wire Line
+	2450 1300 2450 1400
+Wire Wire Line
+	7200 3250 7200 3900
+NoConn ~ 7750 3350
+Wire Wire Line
+	7750 4750 7200 4750
+Wire Wire Line
+	7200 4750 7200 5200
+Wire Wire Line
+	7750 4850 7100 4850
+Wire Wire Line
+	7100 4500 7100 4850
 $EndSCHEMATC
